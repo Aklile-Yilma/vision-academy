@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDot, RxDotFilled } from "react-icons/rx";
 
@@ -44,8 +44,16 @@ const Banner = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => clearInterval(slideInterval);
+  }, [currentIndex]);
+
   return (
-    <div className="h-[780px] w-full m-auto py-16 relative group">
+    <div className="h-[36rem] w-full m-auto py-16 relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full bg-center bg-cover duration-500 relative"

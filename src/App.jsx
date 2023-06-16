@@ -1,12 +1,12 @@
+import Footer from "./components/layout/Footer";
+import NavBar from "./components/layout/NavBar";
 import "./index.css";
-import Header from "./layouts/Header";
 import RoutesComponent from "./routes/root";
-import Footer from "./layouts/Footer";
 
 function App() {
   return (
     <>
-      <Header />
+      <NavBar />
       <RoutesComponent />
       <Footer />
     </>

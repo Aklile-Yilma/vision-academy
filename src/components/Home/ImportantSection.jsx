@@ -35,7 +35,7 @@ const ImportantSection = () => {
         </p>
       </div>
 
-      <section className="grid grid-cols-1 grid-rows-4 gap-2 md:grid-cols-2 md:grid-rows-4">
+      <section className="grid grid-cols-1 grid-rows-4 gap-2 md:grid-cols-2 md:grid-rows-2">
         {infoData.map((item) => (
           <div
             key={item.header}
