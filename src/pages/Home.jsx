@@ -4,7 +4,7 @@ import ImportantSection from "../components/Home/ImportantSection";
 
 const Home = () => {
   return (
-    <div className="font-loto">
+    <div className="font-merriweather">
       <h1 className="text-lg md:text-2xl text-accent text-center">
         Welcome To Vision Academy
       </h1>

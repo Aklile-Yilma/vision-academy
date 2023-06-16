@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         loto: ["Lato", "sans-serif"],
+        merriweather: ["Merriweather", "serif"],
       },
     },
   },
