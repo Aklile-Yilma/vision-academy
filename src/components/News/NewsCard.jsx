@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import formatDate from "../../utils/dateConvertor";
 import logo from "../../assets/slides/building-1.jpeg";
-import CustomButton from "../common/CustomButton";
 import { useNavigate } from "react-router-dom";
 
 function NewsCard({ datePosted, description }) {
