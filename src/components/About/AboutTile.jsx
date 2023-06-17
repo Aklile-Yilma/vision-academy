@@ -6,7 +6,7 @@ const AboutTile = ({ text, img, reverse, heading }) => {
     <section
       className={classNames(
         reverse
-          ? "bg-primary text-white"
+          ? "bg-primary text-white flex-row-reverse"
           : "flex bg-white text-black p-2 lg:p-20"
       )}
     >
