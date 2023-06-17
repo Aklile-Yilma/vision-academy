@@ -7,7 +7,8 @@ const AboutTile = ({ text, img, reverse, heading }) => {
       className={classNames(
         reverse
           ? "bg-primary text-white flex-row-reverse"
-          : "flex bg-white text-black p-2 lg:p-20"
+          : "bg-white text-black",
+        "flex  p-2 lg:p-20"
       )}
     >
       <div className="w-full lg:w-1/2 px-4 lg:flex hidden">
