@@ -1,5 +1,4 @@
 import { useState } from "react";
-import socialMedia from "../../data/socials.json";
 import logo from "../../assets/logo_cropped.png";
 import notify from "../../utils/successNotification";
 import { ToastContainer } from "react-toastify";
