@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <div className="flex justify-center items-center flex-col ">
       <div
-        className="w-full md:w-3/4 lg:w-3/4 h-96 bg-cover bg-center"
+        className="w-full md:w-3/4 lg:w-3/4 h-[30rem] bg-cover bg-center"
         style={{ backgroundImage: `url(${BgImg})` }}
       >
         <div className="w-full h-full flex flex-col justify-center items-center backdrop-blur bg-primary/80">
