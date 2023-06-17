@@ -3,6 +3,7 @@ import socialMedia from "../../data/socials.json";
 import logo from "../../assets/logo_cropped.jpeg";
 import notify from "../../utils/successNotification";
 import { ToastContainer } from "react-toastify";
+import CustomButton from "../common/CustomButton";
 export const Footer = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -57,12 +58,7 @@ export const Footer = () => {
                   {emailError && (
                     <span className="text-red-500 text-sm">{emailError}</span>
                   )}
-                  <button
-                    type="submit"
-                    className="py-2 px-6 rounded bg-white border border-primary text-base text-primary font-semibold uppercase hover:bg-primary hover:text-white transition duration-300 ease-in-out"
-                  >
-                    Subscribe
-                  </button>
+                  <CustomButton text="Subscribe" callback={() => {}} />
                 </div>
               </form>
             </div>
@@ -74,23 +70,32 @@ export const Footer = () => {
             <div className="flex">
               <p className="mr-1 text-gray-800">Phone:</p>
               <a
-                href="tel:850-123-5021"
+                href="tel:+251465550014"
                 aria-label="Our phone"
                 title="Our phone"
-                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="transition-colors duration-300 text-primary hover:text-green-600"
               >
-                850-123-5021
+                +251465550014
+              </a>
+              <span>/</span>
+              <a
+                href="tel:+251465553217"
+                aria-label="Our phone"
+                title="Our phone"
+                className="transition-colors duration-300 text-primary hover:text-green-600"
+              >
+                +251465553217
               </a>
             </div>
             <div className="flex">
               <p className="mr-1 text-gray-800">Email:</p>
               <a
-                href="mailto:info@lorem.mail"
+                href="mailto:info@visionacdemy.edu.et"
                 aria-label="Our email"
                 title="Our email"
-                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="transition-colors duration-300 text-primary hover:text-green-600"
               >
-                info@lorem.mail
+                info@visionacdemy.edu.et
               </a>
             </div>
             <div className="flex">
@@ -101,9 +106,9 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Our address"
                 title="Our address"
-                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="transition-colors duration-300 text-primary hover:text-green-600"
               >
-                312 Lovely Street, NY
+                SNNP Region, Hosanna, Ethiopia. Next To AG Hotel
               </a>
             </div>
           </div>

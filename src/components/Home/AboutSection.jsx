@@ -1,4 +1,4 @@
-import BgImg from "../../assets/building-1.jpeg";
+import BgImg from "../../assets/slides/building-1.jpeg";
 
 const AboutSection = () => {
   return (

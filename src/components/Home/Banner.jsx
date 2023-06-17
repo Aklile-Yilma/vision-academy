@@ -1,32 +1,8 @@
 import { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDot, RxDotFilled } from "react-icons/rx";
-
+import slides from "../../data/slides.json";
 const Banner = () => {
-  const slides = [
-    {
-      url: "/building-1.jpeg",
-      text: "Creating a generation with vision",
-    },
-    {
-      url: "/building-2.jpeg",
-      text: "",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
-      text: "",
-    },
-
-    {
-      url: "https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80",
-      text: "",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
-      text: "",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {

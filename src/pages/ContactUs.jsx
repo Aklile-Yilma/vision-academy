@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import socialMedia from "../data/socials.json";
 import notify from "../utils/successNotification";
+import CustomButton from "../components/common/CustomButton";
 // import dotenv from "dotenv";
 
 // dotenv.config();
@@ -39,20 +40,12 @@ const ContactUs = () => {
       /* 
       send email
       */
-      // process.env.REACT_APP_SERVICE_ID,
-      //   process.env.REACT_APP_TEMPLATE_ID,
-      //   form.current,
-      //   process.env.REACT_APP_PUBLIC_KEY;
       emailjs
         .sendForm(
-          // "service_75cuz96",
-          // "template_azivjxg",
-          // form.current,
-          // "i1lHEV215jlZuDWTI"
-          process.env.REACT_APP_SERVICE_ID,
-          process.env.REACT_APP_TEMPLATE_ID,
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
           form.current,
-          process.env.REACT_APP_PUBLIC_KEY
+          import.meta.env.VITE_PUBLIC_KEY
         )
         .then(
           (result) => {
@@ -164,12 +157,7 @@ const ContactUs = () => {
             </div>
             {/* ::Submit Button */}
             <div>
-              <button
-                type="submit"
-                className="py-2 px-6 rounded bg-white border border-primary text-base text-primary font-semibold uppercase hover:bg-primary hover:text-white transition duration-300 ease-in-out"
-              >
-                Send Message
-              </button>
+              <CustomButton text="Send Message" callback={() => {}} />
             </div>
           </form>
         </div>
