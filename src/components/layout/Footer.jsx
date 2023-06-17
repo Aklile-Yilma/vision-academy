@@ -1,9 +1,13 @@
 import { useState } from "react";
 import socialMedia from "../../data/socials.json";
-import logo from "../../assets/logo_cropped.jpeg";
+import logo from "../../assets/logo_cropped.png";
 import notify from "../../utils/successNotification";
 import { ToastContainer } from "react-toastify";
 import CustomButton from "../common/CustomButton";
+import { AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
+import { MdOutlineFacebook } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+
 export const Footer = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -24,8 +28,22 @@ export const Footer = () => {
     setEmail(e.target.value);
     setEmailError(""); // Clear the email error message when user types in the input
   };
+  const iconsData = [
+    {
+      icon: AiOutlineTwitter,
+      to: "",
+    },
+    {
+      icon: MdOutlineFacebook,
+      to: "https://www.facebook.com/Visionacademyethiopia",
+    },
+    {
+      icon: AiFillYoutube,
+      to: "",
+    },
+  ];
   return (
-    <footer className="border-t mt-auto">
+    <footer className="border-t mt-auto bg-slate-100">
       <div className="w-full px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
         <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2">
@@ -119,22 +137,16 @@ export const Footer = () => {
             </span>
 
             {/* ::Socials */}
-            <div className="flex items-center">
-              {socialMedia.map(({ to, styleClass, bgColor, svg }, index) => (
-                <a
+            <div className="flex items-center gap-4 mt-4 text-2xl md:text-3xl ">
+              {iconsData.map(({ icon: Icon, to }, index) => (
+                <NavLink
                   key={index}
                   href={to}
-                  className={styleClass}
-                  style={{ backgroundColor: { bgColor } }}
+                  target="_blank"
+                  className="hover:text-gray-400"
                 >
-                  <svg
-                    className="w-5 h-5 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d={svg.path} />
-                  </svg>
-                </a>
+                  <Icon />
+                </NavLink>
               ))}
             </div>
 

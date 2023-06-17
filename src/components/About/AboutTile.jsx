@@ -13,7 +13,10 @@ const AboutTile = ({ text, img, reverse, heading }) => {
     >
       <div className="w-full lg:w-1/2 px-4 lg:flex hidden">
         <div className="w-2/3 lg:w-2/3 m-auto">
-          <img src={img} className="w-full" />
+          <img
+            src={img}
+            className="w-full rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+          />
         </div>
       </div>
       <div className="w-full lg:w-1/2 px-4 text-center lg:text-left mt-5 lg:mt-0">

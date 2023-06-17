@@ -52,7 +52,7 @@ const Primary = () => {
         {primary.criteria.map((req, index) => (
           <p key={index} className="pt-4 flex items-center">
             <RxDotFilled className="mr-8" />
-            List ({index + 1}) - {req}
+            {req}
           </p>
         ))}
       </div>

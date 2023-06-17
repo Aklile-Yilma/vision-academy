@@ -1,11 +1,15 @@
 import { useState, useRef } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import socialMedia from "../data/socials.json";
 import notify from "../utils/successNotification";
 import CustomButton from "../components/common/CustomButton";
+import { AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
+import { MdOutlineFacebook } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+
 // import dotenv from "dotenv";
 
 // dotenv.config();
@@ -16,6 +20,15 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
   const form = useRef();
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMap(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const validateForm = () => {
     const errors = {};
     if (!name.trim()) {
@@ -64,19 +77,38 @@ const ContactUs = () => {
     }
   };
 
+  const iconsData = [
+    {
+      icon: AiOutlineTwitter,
+      to: "",
+    },
+    {
+      icon: MdOutlineFacebook,
+      to: "https://www.facebook.com/Visionacademyethiopia",
+    },
+    {
+      icon: AiFillYoutube,
+      to: "",
+    },
+  ];
+
   return (
     <div className="relative mx-auto w-full max-w-7xl bg-white text-gray-700">
       <div className="grid grid-cols-2">
         {/* :MAP CONTAINER */}
         <div className="order-1 col-span-full">
-          <iframe
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=vision%20acadamy%20hossana%20ethiopia%20+(My%20BuVsiness%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            title="map"
-            width="100%"
-            height="300px"
-            className=""
-            loading="lazy"
-          />
+          {showMap ? (
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=vision%20acadamy%20hossana%20ethiopia%20+(My%20BuVsiness%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              title="map"
+              width="100%"
+              height="300px"
+              className="animate-pulse"
+              loading="lazy"
+            />
+          ) : (
+            <div className="h-64 animate-pulse bg-gray-300 rounded-md" />
+          )}
         </div>
 
         {/* :CONTACT FORM CONTAINER */}
@@ -188,22 +220,16 @@ const ContactUs = () => {
               Ethiopia.
             </p>
             {/* ::Socials */}
-            <div className="flex items-center">
-              {socialMedia.map(({ to, styleClass, bgColor, svg }, index) => (
-                <a
+            <div className="flex items-center gap-4 mt-4 text-2xl md:text-3xl ">
+              {iconsData.map(({ icon: Icon, to }, index) => (
+                <NavLink
                   key={index}
                   href={to}
-                  className={styleClass}
-                  style={{ backgroundColor: { bgColor } }}
+                  target="_blank"
+                  className="hover:text-gray-400"
                 >
-                  <svg
-                    className="w-5 h-5 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d={svg.path} />
-                  </svg>
-                </a>
+                  <Icon />
+                </NavLink>
               ))}
             </div>
           </div>

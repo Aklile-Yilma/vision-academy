@@ -64,7 +64,7 @@ function NewsCard({ datePosted, description }) {
                 <div className="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
                   <button
                     onClick={handleMoreInfo}
-                    className="bg-primary text-white hover:bg-white hover:text-primary border border-solid border-grey w-1/3 lg:w-full py-2 transition duration-300 ease-in-out"
+                    className="bg-primary text-white hover:bg-white hover:text-primary border border-solid border-grey w-2/3 lg:w-full py-2 transition duration-300 ease-in-out"
                   >
                     More Info
                   </button>

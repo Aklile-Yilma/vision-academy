@@ -10,7 +10,7 @@ function AboutUs() {
     navigate("/contact-us");
   };
   return (
-    <main className="mx-auto max-w-full sm:px-4 m-auto">
+    <main className="mx-auto max-w-full m-auto">
       <Heading text="KNOW MORE ABOUT US" />
 
       {about.map((item, index) => (

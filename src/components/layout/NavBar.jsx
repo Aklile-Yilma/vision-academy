@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { CgPlayListRemove } from "react-icons/cg";
 import { RiMenu3Fill } from "react-icons/ri";
-import logo from "../../assets/logo_cropped.jpeg";
+import logo from "../../assets/logo_cropped.png";
 import classNames from "../../utils/classNames";
 
 const NavBar = () => {
+  const location = useLocation();
   const [menu, setMenu] = useState(false);
   const menuRef = useRef(null);
 
@@ -71,8 +72,11 @@ const NavBar = () => {
               <NavLink
                 key={index}
                 className={classNames(
-                  (isActive) => (isActive ? "text-primary" : ""),
-                  "hover:underline underline-offset-4 decoration-primary decoration-2"
+                  (isActive) => (isActive ? "text-primary underline" : ""),
+                  "hover:underline underline-offset-4 decoration-primary decoration-2",
+                  navItem.to === location.pathname
+                    ? "underline underline-offset-4 decoration-primary decoration-4"
+                    : ""
                 )}
                 to={navItem.to}
               >

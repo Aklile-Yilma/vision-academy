@@ -76,15 +76,21 @@ const Preparatory = () => {
         It space permits, following the application of these criteria,
         preference will be given to pupils who:
       </p>
-      <p className="flex items-center">
-        <RxDotFilled className="mr-8" /> have specialised skills or talents that
-        the school has the potential to develop, or
-      </p>
-      <p className="flex items-center">
-        <RxDotFilled className="mr-8" /> who have strong academic ability to be
-        able to cope with the high standards expected at the school, or are able
-        to cope in a traditional school environment.
-      </p>
+      <div>
+        <RxDotFilled className="mr-8 inline" />
+        <p className="inline">
+          have specialised skills or talents that the school has the potential
+          to develop, or
+        </p>
+      </div>
+      <div>
+        <RxDotFilled className="mr-8 inline" />
+        <p className="inline">
+          who have strong academic ability to be able to cope with the high
+          standards expected at the school, or are able to cope in a traditional
+          school environment.
+        </p>
+      </div>
     </div>
   );
 };

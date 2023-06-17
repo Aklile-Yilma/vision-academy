@@ -11,7 +11,7 @@ const AboutSection = () => {
           <h1 className="m-5 text-center text-base md:text-2xl text-white font-semibold">
             About us
           </h1>
-          <span className="text-white px-4 md:px-20 text-start">
+          <span className="text-white px-4 md:px-20 text-center">
             Established in August 1998, Vision Academy is a renowned educational
             institution located in Hosanna town, Ethiopia. With a legacy of more
             than two decades, we have been committed to providing quality

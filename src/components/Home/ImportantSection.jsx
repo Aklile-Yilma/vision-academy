@@ -39,7 +39,7 @@ const ImportantSection = () => {
         {infoData.map((item) => (
           <div
             key={item.header}
-            className="max-w-screen-md mx-auto px-4 py-8 text-start"
+            className="max-w-screen-md mx-auto p-4 text-start"
           >
             <div className="flex items-center">
               <AiOutlineCheck className="text-red-500 mr-2 -mt-4" />
