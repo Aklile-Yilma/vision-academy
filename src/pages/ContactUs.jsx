@@ -16,12 +16,6 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
   const form = useRef();
-  const [loading, setLoading] = useState(true);
-
-  const handleLoad = () => {
-    setLoading(false);
-  };
-
   const validateForm = () => {
     const errors = {};
     if (!name.trim()) {
@@ -75,26 +69,14 @@ const ContactUs = () => {
       <div className="grid grid-cols-2">
         {/* :MAP CONTAINER */}
         <div className="order-1 col-span-full">
-          {loading ? (
-            <div className="h-80 bg-gray-300 rounded-lg animate-pulse"></div>
-          ) : (
-            <iframe
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=vision%20acadamy%20hossana%20ethiopia%20+(My%20BuVsiness%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              title="map"
-              width="100%"
-              height="300px"
-              className=""
-              loading="lazy"
-              onLoad={() => {}}
-              // Use load event instead of onLoad event
-              // to detect when the map iframe finishes loading
-              // and call the handleLoad function
-              // Note: the load event does not need to have a handler function
-              // attached to it, so we can use an empty arrow function here
-              // to avoid warnings in the console
-              onLoadedData={handleLoad}
-            />
-          )}
+          <iframe
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=vision%20acadamy%20hossana%20ethiopia%20+(My%20BuVsiness%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            title="map"
+            width="100%"
+            height="300px"
+            className=""
+            loading="lazy"
+          />
         </div>
 
         {/* :CONTACT FORM CONTAINER */}
