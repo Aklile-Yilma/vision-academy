@@ -2,51 +2,51 @@
   {
     "fullName": "Bereket Gebyehu",
     "position": "School Manager",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   },
   {
     "fullName": "Melaku Delelegn",
     "position": "Owner and Board Secretary",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   },
   {
     "fullName": "Zeritu Abebe",
     "position": "Record Office",
-    "url": "src/assets/staff/avatar_female.png"
+    "url": "/static/assets/staff/avatar_female.png"
   },
   {
     "fullName": "Misganaw Lemma",
     "position": "Dupty Director",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   },
   {
     "fullName": "Shiferaw Erdedo",
     "position": "Coordinator",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   },
   {
     "fullName": "Biruk Yilma",
     "position": "Coordinator",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   },
   {
     "fullName": "Saron Girma",
     "position": "Admission Office",
-    "url": "src/assets/staff/avatar_female.png"
+    "url": "/static/assets/staff/avatar_female.png"
   },
   {
     "fullName": "Tilahun Zegeye",
     "position": "International Affairs",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   },
   {
     "fullName": "Mestawet Hursa",
     "position": "Registrar",
-    "url": "src/assets/staff/avatar_female.png"
+    "url": "/static/assets/staff/avatar_female.png"
   },
   {
     "fullName": "Girum Basha",
     "position": "Secretariat",
-    "url": "src/assets/staff/avatar_male.png"
+    "url": "/static/assets/staff/avatar_male.png"
   }
 ]
