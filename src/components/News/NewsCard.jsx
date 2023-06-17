@@ -1,8 +1,16 @@
 import PropTypes from "prop-types";
 import formatDate from "../../utils/dateConvertor";
+import logo from "../../assets/slides/building-1.jpeg";
+import CustomButton from "../common/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 function NewsCard({ datePosted, description }) {
   const formattedDate = formatDate(datePosted);
+  const navigate = useNavigate();
+
+  const handleMoreInfo = () => {
+    navigate("/contact-us");
+  };
 
   return (
     <>
@@ -25,8 +33,7 @@ function NewsCard({ datePosted, description }) {
           <div
             className="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative"
             style={{
-              backgroundImage:
-                "url('https://images7.alphacoders.com/347/347549.jpg')",
+              backgroundImage: `url(${logo})`,
             }}
           ></div>
           {/* ./Card image */}
@@ -56,7 +63,10 @@ function NewsCard({ datePosted, description }) {
                 {/* ./Card description */}
                 {/* Call to action button */}
                 <div className="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
-                  <button className="bg-white hover:bg-grey-darker hover:bg-primary hover:text-white border border-solid border-grey w-1/3 lg:w-full py-2">
+                  <button
+                    onClick={handleMoreInfo}
+                    className="bg-primary text-white hover:bg-white hover:text-primary border border-solid border-grey w-1/3 lg:w-full py-2 transition duration-300 ease-in-out"
+                  >
                     More Info
                   </button>
                 </div>

@@ -47,9 +47,9 @@ const NavBar = () => {
     { name: "Admissions", to: "/admissions" },
     { name: "Staff", to: "/staff" },
     { name: "News", to: "/news" },
-    { name: "About Us", to: "/about" },
     { name: "Contact", to: "/contact-us" },
-    { name: "Gallery", to: "/contact-us" },
+    { name: "About Us", to: "/about" },
+    { name: "Gallery", to: "/gallery" },
   ];
   return (
     <>

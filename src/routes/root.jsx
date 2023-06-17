@@ -6,6 +6,7 @@ import Admissions from "../pages/Admissions";
 import ContactUs from "../pages/ContactUs";
 import Staff from "../pages/Staff";
 import AboutUs from "../pages/About";
+import Gallery from "../pages/Gallery";
 
 const RoutesComponent = () => {
   return (
@@ -17,6 +18,7 @@ const RoutesComponent = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/staff" element={<Staff />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
