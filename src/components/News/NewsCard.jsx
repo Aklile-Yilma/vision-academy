@@ -46,7 +46,7 @@ function NewsCard({ datePosted, description }) {
                 <div className="w-full lg:w-1/5 lg:border-right lg:border-solid text-center md:text-left">
                   <h3>Vision Academy</h3>
                   <p className="mb-0 mt-3 text-grey-dark text-sm italic">
-                    Gerji - Ethiopia
+                    Hosanna - Ethiopia
                   </p>
                   <hr className="w-1/4 md:ml-0 mt-4  border lg:hidden" />
                 </div>
