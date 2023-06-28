@@ -52,12 +52,16 @@ const ContactUs = () => {
       /* 
       send email
       */
+      // import.meta.env.VITE_SERVICE_ID,
+      // import.meta.env.VITE_TEMPLATE_ID,
+      // form.current,
+      // import.meta.env.VITE_PUBLIC_KEY
       emailjs
         .sendForm(
-          import.meta.env.VITE_SERVICE_ID,
-          import.meta.env.VITE_TEMPLATE_ID,
+          "service_vdb1iwo",
+          "template_buw9o5u",
           form.current,
-          import.meta.env.VITE_PUBLIC_KEY
+          "p6XNUPZYktnytk7qo"
         )
         .then(
           (result) => {
